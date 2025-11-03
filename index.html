@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="skip-link initial-bounce" id="scrollDownBtn" aria-label="Прокрутить вниз"></button>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <picture>
+                    <source srcset="images/logo.svg" type="image/svg+xml">
+                    <source srcset="images/logo.webp" type="image/webp">
+                    <img srcset="images/logo.svg" alt="Логотип" class="logo-img" width="100" height="100">
+                </picture>
+                <h1>Поскряков Александр</h1>
+                <div class="stars">
+                    <div class="star star-1">✦</div>
+                    <div class="star star-2">✦</div>
+                </div>
+            </div>
+            <nav aria-label="Основная навигация">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="pages/projects.html">Проекты</a></li>
+                    <li><a href="pages/diary.html">Дневник</a></li>
+                    <li><a href="pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <figure class="hero__image">
+                        <picture>
+                            <source
+                                srcset="images/hero-200.avif"
+                                media="(min-width: 1200px)"
+                                srcset="images/hero-300.avif 300w, images/hero-400.avif 400w"
+                                type="image/avif">
+                            <source
+                                media="(min-width: 768px)"
+                                srcset="images/hero-200.avif 200w, images/hero-300.avif 300w"
+                                type="image/avif">
+                            <source
+                                srcset="images/hero-150.avif 150w, images/hero-200.avif 200w"
+                                type="image/avif">
+                            
+                            <source
+                                media="(min-width: 1200px)"
+                                srcset="images/hero-300.webp 300w, images/hero-400.webp 400w"
+                                type="image/webp">
+                            <source
+                                media="(min-width: 768px)"
+                                srcset="images/hero-200.webp 200w, images/hero-300.webp 300w"
+                                type="image/webp">
+                            <source
+                                srcset="images/hero-150.webp 150w, images/hero-200.webp 200w"
+                                type="image/webp">
+                            
+                            <img class="hero__photo"
+                                srcset="images/hero-200.jpg"
+                                srcset="images/hero-150.jpg 150w, images/hero-200.jpg 200w, images/hero-300.jpg 300w, images/hero-400.jpg 400w"
+                                sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+                                width="200" height="200"
+                                alt="Портрет студента"
+                                loading="eager"
+                                decoding="async">
+                        </picture>
+                    </figure>
+                    <div class="hero-text">
+                        <h2>Привет! Я студент группы ЭФБО-15-24</h2>
+                        <p class="hero-description">Увлекаюсь веб-разработкой и созданием современных интерфейсов. Постоянно учусь новым технологиям и совершенствую свои навыки.</p>
+                        <a href="assets/resume.pdf" class="btn btn-primary" download>Скачать резюме</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name truecolor">HTML/CSS</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name truecolor">JavaScript</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name truecolor">Bootstrap</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name truecolor">React</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="60"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-preview-section">
+            <div class="container">
+                <h2 class="section-title">Лучшие проекты</h2>
+                <div class="projects-preview-grid">
+                    <div class="project-preview-card">
+                        <div class="project-preview-icon">
+                            <picture>
+                                <source srcset="images/photo1.webp" type="image/webp">
+                                <img src="images/photo1.png" 
+                                     alt="Сайтик 1" 
+                                     class="avasite" 
+                                     width="150" height="150"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                        </div>
+                        <div class="text1">
+                            <h3>сайтик 1</h3>
+                            <p>Лега</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://xoston.github.io/pr3/" target="_blank"
+                                class="btn btn-primary btn-small">Посмотреть сайт</a>
+                        </div>
+                    </div>
+                    <div class="project-preview-card">
+                        <div class="project-preview-icon">
+                            <picture>
+                                <source srcset="images/photo2.webp" type="image/webp">
+                                <img src="images/photo2.png" 
+                                     alt="Сайтик 2" 
+                                     class="avasite" 
+                                     width="150" height="150"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                        </div>
+                        <div class="text1">
+                            <h3>сайтик 2</h3>
+                            <p>Ну такое</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://xoston.github.io/pr11-12/" target="_blank"
+                                class="btn btn-primary btn-small">Посмотреть сайт</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <script src="scripts/header-scroll.js"></script>
+    <script src="scripts/link.js"></script>
+</body>
+</html>

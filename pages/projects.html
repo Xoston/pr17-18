@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Проекты</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <button class="skip-link initial-bounce" id="scrollDownBtn" aria-label="Прокрутить вниз"></button>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Логотип" class="logo-img">
+                <h1>Поскряков Александр</h1>
+                <div class="stars">
+                    <div class="star star-1">✦</div>
+                    <div class="star star-2">✦</div>
+                </div>
+            </div>
+            <nav aria-label="Основная навигация">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="projects.html" class="active">Проекты</a></li>
+                    <li><a href="diary.html">Дневник</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="page-header">
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="html">HTML</button>
+                    <button class="filter-btn" data-filter="js">JS</button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projectsContainer">
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCW3MIe5_mVnNwa04DQhwbuSwNXV-9_4AsGw&s"
+                             alt="Веб-дизайн проект"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-placeholder">Веб-Дизайн</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Современный веб-дизайн</h3>
+                        <p class="project-tech">HTML, CSS, UI/UX</p>
+                        <p class="project-description">Креативные дизайн-решения с фокусом на пользовательский опыт и современные тренды</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="js">
+                    <div class="project-image">
+                        <img src="https://i.playboard.app/p/crEGzZULTU9iZMZh-gwCa942t2S4kobW9RPzBKdNsrWBJd2SQs6-N-iqhQV9KY6sEk-nH5PBhaw/default.jpg"
+                             alt="Интерактивное приложение"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-placeholder">Интерактив</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Интерактивная платформа</h3>
+                        <p class="project-tech">JavaScript, API</p>
+                        <p class="project-description">Динамическое веб-приложение с реальными данными и интерактивными элементами</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="react">
+                    <div class="project-image">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/62/c8/2b/62c82b02-66e0-a4d5-08a3-49cd7d91189b/cover.jpg/1200x630bb.jpg"
+                             alt="React приложение"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-placeholder">React App</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Медиа-приложение</h3>
+                        <p class="project-tech">React, Redux</p>
+                        <p class="project-description">Полнофункциональное приложение для управления медиа-контентом с современным интерфейсом</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKhoOZ79fgm7iyFLpZL0EqmxQ_Vf-rcdeXow&s"
+                             alt="Адаптивный сайт"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-placeholder">Адаптив</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Адаптивный лендинг</h3>
+                        <p class="project-tech">HTML5, CSS3, Flexbox</p>
+                        <p class="project-description">Полностью адаптивный landing page с оптимизацией для всех устройств</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/header-scroll.js"></script>
+    <script src="../scripts/link.js"></script>
+    <script src="../scripts/filtr.js"></script>
+</body>
+</html>

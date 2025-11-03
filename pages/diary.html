@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Учебный дневник</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <button class="skip-link initial-bounce" id="scrollDownBtn" aria-label="Прокрутить вниз"></button>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Логотип" class="logo-img">
+                <h1>Поскряков Александр</h1>
+                <div class="stars">
+                    <div class="star star-1">✦</div>
+                    <div class="star star-2">✦</div>
+                </div>
+            </div>
+            <nav aria-label="Основная навигация">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="diary.html" class="active">Дневник</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <h2 class="section-title">Учебный дневник</h2>
+            
+            <section class="diary-section">
+                <h3 class="subsection-title">История обучения</h3>
+                <div class="progress-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-date">15 дек</div>
+                        <div class="timeline-content">
+                            <span class="timeline-text">Верстка макета сайта</span>
+                            <span class="status completed">✓</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-date">10 дек</div>
+                        <div class="timeline-content">
+                            <span class="timeline-text">JavaScript основы</span>
+                            <span class="status completed">✓</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item in-progress">
+                        <div class="timeline-date">05 дек</div>
+                        <div class="timeline-content">
+                            <span class="timeline-text">Работа с формами</span>
+                            <span class="status in-progress">●</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item in-progress">
+                        <div class="timeline-date">01 дек</div>
+                        <div class="timeline-content">
+                            <span class="timeline-text">Адаптивный дизайн</span>
+                            <span class="status in-progress">●</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item planned">
+                        <div class="timeline-date">25 ноя</div>
+                        <div class="timeline-content">
+                            <span class="timeline-text">React основы</span>
+                            <span class="status planned">○</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="diary-section">
+                <h3 class="subsection-title">Текущие курсы</h3>
+                <div class="courses-grid">
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name truecolor">Веб-разработка</span>
+                            <span class="course-percent">90%</span>
+                        </div>
+                        <div class="course-progress-bar">
+                            <div class="course-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name truecolor">JavaScript</span>
+                            <span class="course-percent">70%</span>
+                        </div>
+                        <div class="course-progress-bar">
+                            <div class="course-progress" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name truecolor">React</span>
+                            <span class="course-percent">50%</span>
+                        </div>
+                        <div class="course-progress-bar">
+                            <div class="course-progress" data-width="50"></div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name truecolor">Базы данных</span>
+                            <span class="course-percent">30%</span>
+                        </div>
+                        <div class="course-progress-bar">
+                            <div class="course-progress" data-width="30"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025</p>
+        </div>
+    </footer>
+    <script src="../scripts/header-scroll.js"></script>
+    <script src="../scripts/link.js"></script>
+</body>
+</html>
