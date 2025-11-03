@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Портфолио</title>
+    <title>Портфолио Поскрякова Александра | Веб-разработчик</title>
+    <meta name="description" content="Портфолио Поскрякова Александра - студента группы ЭФБО-15-24. Веб-разработка, современные интерфейсы, проекты на HTML/CSS/JavaScript">
+    
+    <!-- Предзагрузка ресурсов -->
+    <link rel="preload" href="styles/styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Основные стили -->
     <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Фавикон -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Социальные мета-теги -->
+    <meta property="og:title" content="Портфолио Поскрякова Александра">
+    <meta property="og:description" content="Студент ЭФБО-15-24 | Веб-разработчик">
+    <meta property="og:image" content="images/hero-200.jpg">
+    <meta property="og:url" content="https://ваш-сайт.ru">
+    <meta name="theme-color" content="#000000">
 </head>
 
 <body>
-    <button class="skip-link initial-bounce" id="scrollDownBtn" aria-label="Прокрутить вниз"></button>
+    <!-- Кнопка прокрутки с улучшенной доступностью -->
+    <button class="skip-link initial-bounce" id="scrollDownBtn" aria-label="Прокрутить к основному содержанию">
+        <span class="visually-hidden">Прокрутить вниз</span>
+    </button>
 
     <header>
         <div class="header-container">
@@ -17,17 +40,18 @@
                 <picture>
                     <source srcset="images/logo.svg" type="image/svg+xml">
                     <source srcset="images/logo.webp" type="image/webp">
-                    <img srcset="images/logo.svg" alt="Логотип" class="logo-img" width="100" height="100">
+                    <img src="images/logo.svg" alt="Логотип портфолио Поскрякова Александра" class="logo-img" width="100" height="100">
                 </picture>
                 <h1>Поскряков Александр</h1>
                 <div class="stars">
-                    <div class="star star-1">✦</div>
-                    <div class="star star-2">✦</div>
+                    <div class="star star-1" aria-hidden="true">✦</div>
+                    <div class="star star-2" aria-hidden="true">✦</div>
                 </div>
             </div>
             <nav aria-label="Основная навигация">
+                <h2 class="visually-hidden">Основные разделы сайта</h2>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">Главная</a></li>
                     <li><a href="pages/projects.html">Проекты</a></li>
                     <li><a href="pages/diary.html">Дневник</a></li>
                     <li><a href="pages/contacts.html">Контакты</a></li>
@@ -37,13 +61,13 @@
     </header>
 
     <main id="main">
-        <section class="hero-section">
+        <section class="hero-section" aria-labelledby="hero-heading">
             <div class="container">
+                <h1 id="hero-heading" class="visually-hidden">Главная страница портфолио</h1>
                 <div class="hero-content">
                     <figure class="hero__image">
                         <picture>
                             <source
-                                srcset="images/hero-200.avif"
                                 media="(min-width: 1200px)"
                                 srcset="images/hero-300.avif 300w, images/hero-400.avif 400w"
                                 type="image/avif">
@@ -68,78 +92,79 @@
                                 type="image/webp">
                             
                             <img class="hero__photo"
-                                srcset="images/hero-200.jpg"
+                                src="images/hero-200.jpg"
                                 srcset="images/hero-150.jpg 150w, images/hero-200.jpg 200w, images/hero-300.jpg 300w, images/hero-400.jpg 400w"
                                 sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
                                 width="200" height="200"
-                                alt="Портрет студента"
+                                alt="Портрет Поскрякова Александра - студента и веб-разработчика"
                                 loading="eager"
                                 decoding="async">
                         </picture>
+                        <figcaption class="visually-hidden">Фотография студента</figcaption>
                     </figure>
                     <div class="hero-text">
                         <h2>Привет! Я студент группы ЭФБО-15-24</h2>
                         <p class="hero-description">Увлекаюсь веб-разработкой и созданием современных интерфейсов. Постоянно учусь новым технологиям и совершенствую свои навыки.</p>
-                        <a href="assets/resume.pdf" class="btn btn-primary" download>Скачать резюме</a>
+                        <a href="assets/resume.pdf" class="btn btn-primary" download="Резюме_Поскряков_Александр.pdf">Скачать резюме</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="skills-section">
+        <section class="skills-section" aria-labelledby="skills-heading">
             <div class="container">
-                <h2 class="section-title">Мои навыки</h2>
+                <h2 id="skills-heading" class="section-title">Мои навыки</h2>
                 <div class="skills-grid">
-                    <div class="skill-item">
+                    <div class="skill-item" itemscope itemtype="https://schema.org/KnowsAbout">
                         <div class="skill-info">
-                            <span class="skill-name truecolor">HTML/CSS</span>
+                            <span class="skill-name truecolor" itemprop="name">HTML/CSS</span>
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
+                            <div class="skill-progress" data-width="90" aria-label="Уровень навыка HTML/CSS: 90%"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item" itemscope itemtype="https://schema.org/KnowsAbout">
                         <div class="skill-info">
-                            <span class="skill-name truecolor">JavaScript</span>
+                            <span class="skill-name truecolor" itemprop="name">JavaScript</span>
                             <span class="skill-percent">80%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
+                            <div class="skill-progress" data-width="80" aria-label="Уровень навыка JavaScript: 80%"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item" itemscope itemtype="https://schema.org/KnowsAbout">
                         <div class="skill-info">
-                            <span class="skill-name truecolor">Bootstrap</span>
+                            <span class="skill-name truecolor" itemprop="name">Bootstrap</span>
                             <span class="skill-percent">85%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
+                            <div class="skill-progress" data-width="85" aria-label="Уровень навыка Bootstrap: 85%"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item" itemscope itemtype="https://schema.org/KnowsAbout">
                         <div class="skill-info">
-                            <span class="skill-name truecolor">React</span>
+                            <span class="skill-name truecolor" itemprop="name">React</span>
                             <span class="skill-percent">60%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="60"></div>
+                            <div class="skill-progress" data-width="60" aria-label="Уровень навыка React: 60%"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="projects-preview-section">
+        <section class="projects-preview-section" aria-labelledby="projects-heading">
             <div class="container">
-                <h2 class="section-title">Лучшие проекты</h2>
+                <h2 id="projects-heading" class="section-title">Лучшие проекты</h2>
                 <div class="projects-preview-grid">
-                    <div class="project-preview-card">
+                    <article class="project-preview-card">
                         <div class="project-preview-icon">
                             <picture>
                                 <source srcset="images/photo1.webp" type="image/webp">
                                 <img src="images/photo1.png" 
-                                     alt="Сайтик 1" 
+                                     alt="Внешний вид сайта проекта 'Сайтик 1'" 
                                      class="avasite" 
                                      width="150" height="150"
                                      loading="lazy"
@@ -147,20 +172,20 @@
                             </picture>
                         </div>
                         <div class="text1">
-                            <h3>сайтик 1</h3>
+                            <h3>Сайтик 1</h3>
                             <p>Лега</p>
                         </div>
                         <div class="project-links">
-                            <a href="https://xoston.github.io/pr3/" target="_blank"
+                            <a href="https://xoston.github.io/pr3/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn-primary btn-small">Посмотреть сайт</a>
                         </div>
-                    </div>
-                    <div class="project-preview-card">
+                    </article>
+                    <article class="project-preview-card">
                         <div class="project-preview-icon">
                             <picture>
                                 <source srcset="images/photo2.webp" type="image/webp">
                                 <img src="images/photo2.png" 
-                                     alt="Сайтик 2" 
+                                     alt="Внешний вид сайта проекта 'Сайтик 2'" 
                                      class="avasite" 
                                      width="150" height="150"
                                      loading="lazy"
@@ -168,14 +193,14 @@
                             </picture>
                         </div>
                         <div class="text1">
-                            <h3>сайтик 2</h3>
+                            <h3>Сайтик 2</h3>
                             <p>Ну такое</p>
                         </div>
                         <div class="project-links">
-                            <a href="https://xoston.github.io/pr11-12/" target="_blank"
+                            <a href="https://xoston.github.io/pr11-12/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn-primary btn-small">Посмотреть сайт</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -183,7 +208,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Контакты</p>
+            <p>&copy; 2025 Поскряков Александр. <a href="pages/contacts.html">Контакты</a></p>
         </div>
     </footer>
 
